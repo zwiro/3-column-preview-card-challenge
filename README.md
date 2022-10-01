@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/three-column-preview-card-challenge-2h2g_7zekz)
+- Live Site URL: [Live Site](https://zwiro.github.io/3-column-preview-card-challenge/)
 
 ## My process
 
