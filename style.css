@@ -1,0 +1,148 @@
+:root {
+    --main-bg: hsl(0, 0%, 95%);
+    --sedan-bg: hsl(31, 77%, 52%);
+    --suv-bg: hsl(184, 100%, 22%);
+    --luxury-bg: hsl(179, 100%, 13%);
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+    font-size: 15px;
+    height: 100vh;
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 1.5rem;
+}
+
+.car-cards {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+}
+
+.card {
+    padding: 2rem 4.25rem;
+    height: 100%;
+}
+
+.sedan {
+    background-color: var(--sedan-bg);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.suv {
+    background-color: var(--suv-bg);
+}
+
+.luxury {
+    background-color: var(--luxury-bg);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+img,
+h2,
+p,
+button {
+    padding: 1rem 0;
+}
+
+img {
+    transition: transform 300ms ease-in-out;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.25rem;
+    color: var(--main-bg);
+}
+
+p {
+    color: var(--paragraph-color);
+    line-height: 1.5;
+}
+
+button {
+    background-color: var(--main-bg);
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--main-bg);
+    border-radius: 2rem;
+    mix-blend-mode: screen;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 0%);
+    color: var(--main-bg);
+    cursor: pointer;
+}
+
+.card:hover img {
+    transform: translateX(5rem);
+}
+
+@media (min-width: 1200px) {
+
+    main {
+        height: clamp(25rem, 100%, 100vh);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .car-cards {
+        height: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-height: 35rem;
+    }
+
+    .card {
+        max-width: 25vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sedan {
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .luxury {
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    img {
+        max-width: 5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        height: 15rem;
+        letter-spacing: 0.5px;
+    }
+
+    button {
+        text-align: center;
+        max-width: 9rem;
+    }
+
+    @media (max-height: 430px) {
+        p {
+            font-size: 0.75rem;
+        }
+    }
+}
